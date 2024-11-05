@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Área</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Área</h1>
+
+            <p>Cálculo área e valor total</p>
+
+            <label for="txt1">Comprimento:</label>
+
+            <input type="number" id="txt1">
+
+            <label for="txt2">Largura:</label>
+
+            <input type="number" id="txt2">
+
+            <label for="txt3">Valor metro quadrado:</label>
+
+            <input type="number" id="txt3">
+
+            <button onclick="botao_click()">Calcular</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var caixaTexto1 = document.getElementById("txt1").value;
+            var comprimento = parseFloat(caixaTexto1);
+
+            var caixaTexto2 = document.getElementById("txt2").value;
+            var largura = parseFloat(caixaTexto2);
+
+            var caixaTexto3 = document.getElementById("txt3").value;
+            var metro2 = parseFloat(caixaTexto3);
+
+            var area = comprimento * largura;
+
+            var precoTotal = area * metro2;
+
+            var mensagem = "A área total do terreno é " + area + "m2 e o valor total do terreno é R$" + precoTotal;
+
+            alert(mensagem);
+
+        }
+
+    </script>
+
+</body>
+</html>

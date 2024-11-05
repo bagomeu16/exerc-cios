@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Soma pares</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Ímpares</h1>
+
+            <p>Digite abaixo para somar os numeros pares:</p>
+
+            <label for="txt1">Digite o número final:</label>
+
+            <input type="number" id="txtFim">
+
+            <button onclick="botao_click()">Somar pares</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+            var fimTexto = document.getElementById("txtFim").value;
+            var fim = parseInt(fimTexto);
+
+            var soma = 0;
+
+            for (var i = 1; i <= fim; i++) {
+                // Operador MOD(%), operador que retorna o resto de uma divisão.
+                var resto = i % 2;
+
+                if (resto != 0) {
+                    impar = true;
+                }
+
+                else {
+                    impar = false;
+                }
+
+                if (!impar) {
+                    soma = soma + i;
+                }
+            }
+
+            alert("A soma dos números pares é " + soma);
+
+        }
+
+    </script>
+
+</body>
+</html>
